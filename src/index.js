@@ -187,6 +187,7 @@ const auto_updater = () => {
   return new Promise((resolve) => {
     const updater = require("electron-updater")
     const autoUpdater = updater.autoUpdater
+    autoUpdater.allowPrerelease = false
 
     // Update logging
     autoUpdater.logger = require('electron-log')
@@ -195,9 +196,9 @@ const auto_updater = () => {
     if (!isDev) {
       autoUpdater.setFeedURL({
         provider: 'github',
-        owner: 'marcok81',
-        repo: 'cleverq-kiosk-update-test',
-        token: "4051b919add798a1c8a1a88c4b88f4da6b9668bb"
+        owner: 'cleverq-bic',
+        repo: 'cleverq-kiosk',
+        token: "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"
       })
 
       autoUpdater.autoDownload = true
@@ -227,6 +228,7 @@ const auto_updater = () => {
       })
 
       autoUpdater.on('error', function (err) {
+        autoUpdater.logger.debug(err)
         update_status_handler(0)
         resolve({status: 'error'})
       })
