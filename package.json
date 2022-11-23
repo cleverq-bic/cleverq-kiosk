@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.vasgmbh.de/mom_bic/kiosk.git"
+    "url": "git@github.com:cleverq-bic/cleverq-kiosk.git"
   },
   "author": {
     "name": "B.I.C. GmbH",
@@ -27,8 +27,8 @@
     "productName": "cleverQ-Kiosk",
     "publish": [
       {
-        "provider": "generic",
-        "url": "https://gitlab.vasgmbh.de",
+        "provider": "github",
+        "url": "https://github.com/cleverq-bic/cleverq-kiosk",
         "private": true
       }
     ],
