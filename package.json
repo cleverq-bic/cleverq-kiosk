@@ -1,0 +1,75 @@
+{
+  "name": "cleverq-kiosk",
+  "version": "1.6.1-rev.b",
+  "description": "a MEM-O-MATIC Kiosk",
+  "main": "./src/index.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --linux --armv7l --mac -p always",
+    "rsync": "rsync -avz -r --exclude-from='./rsync_exclude.txt' ./ -e ssh pi@192.168.34.187:/home/pi/development/kiosk",
+    "test": "mocha ./src/test/spec.js",
+    "postinstall": "",
+    "install": "node-gyp install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.vasgmbh.de/mom_bic/kiosk.git"
+  },
+  "author": {
+    "name": "B.I.C. GmbH",
+    "email": "info@bic.com.de"
+  },
+  "license": "UNLICENSED",
+  "homepage": "https://www.cleverq.de",
+  "build": {
+    "appId": "com.cleverq-kiosk.app",
+    "artifactName": "cleverq-kiosk.${ext}",
+    "productName": "cleverQ-Kiosk",
+    "publish": [
+      {
+        "provider": "generic",
+        "url": "https://gitlab.vasgmbh.de",
+        "private": true
+      }
+    ],
+    "mac": {
+      "category": "public.app-category.productivity",
+      "icon": "resources/cleverq.ico",
+      "identity": "Dirk Ostermann (NYGDG6MYWE)",
+      "target": [
+        "zip"
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "category": "Development",
+      "icon": "resources/cleverq.png"
+    }
+  },
+  "devDependencies": {
+    "auto-updater": "^1.0.2",
+    "devtron": "^1.4.0",
+    "electron": "^3.0.13",
+    "electron-builder": "^20.39.0",
+    "mocha": "^6.1.4",
+    "spectron": "^5.0.0"
+  },
+  "dependencies": {
+    "axios-https-proxy-fix": "^0.17.1",
+    "electron-is-dev": "^2.0.0",
+    "electron-log": "^4.4.8",
+    "electron-online": "^1.0.0",
+    "electron-store": "^3.2.0",
+    "electron-updater": "^4.0.6",
+    "es6-actioncable": "^0.5.6",
+    "ip": "^1.1.5",
+    "node-machine-id": "^1.1.10",
+    "piinfo": "^0.0.2",
+    "socks-proxy-agent": "^4.0.2",
+    "spectre.css": "^0.5.8",
+    "tunnel": "^0.0.6",
+    "ws": "^6.2.1"
+  }
+}

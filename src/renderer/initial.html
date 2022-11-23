@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Initial setup</title>
+    <link rel="stylesheet" href="../../node_modules/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="../../node_modules/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="../../node_modules/spectre.css/dist/spectre-icons.min.css">
+    <link rel="stylesheet" href="./styles/initial.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="columns">
+        <div class="column col-12">
+          <img src="./images/splash_logo.png" alt="splash_logo" class="center"></img>
+          <div class="empty" style="margin-top: 100px;">
+            <div class="empty-icon">
+              <i class="icon icon-4x icon-stop"></i>
+            </div>
+            <p class="empty-title h1">This device is not registered yet.</p>
+            <p class="empty-subtitle h2">Please call +49 (0) 4327 25399 20</p>
+            <p id="link" class="emtpy-subtitle h2 bottom-right" style="margin-bottom: 105px; color: #b66e0f;"></p>
+            <p id="ip_address" class="emtpy-subtitle h2 bottom-right" style="margin-bottom: 64px; color: #32b643;"></p>
+            <p id="serial_nr" class="emtpy-subtitle h2 bottom-right"></p>
+            <p id="version" class="emtpy-subtitle h2"></p>
+            <div id="loading" class="spinner" style="margin-top: 35px;">
+              <div class="bounce1"></div>
+              <div class="bounce2"></div>
+              <div class="bounce3"></div>
+            </div>
+            <h3 class="text-success" id="added_to_list" style="margin-top: 25px;"></h3>
+          </div>
+          <progress class="progress" id="progress" value="0" max="100"></progress>
+          <div class="text-center">
+            <h3 style="margin-top: 30px;" class="text-success" id="status_text"></h3>
+            <h3 class="text-success" id="setup_done"></h3></div>
+            <h1 class="text-error" id="countdown"></h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./javascript/initial.js"></script>
+  </body>
+</html>

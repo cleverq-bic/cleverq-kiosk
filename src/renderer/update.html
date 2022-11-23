@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Initial setup</title>
+    <link rel="stylesheet" href="../../node_modules/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="../../node_modules/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="../../node_modules/spectre.css/dist/spectre-icons.min.css">
+    <link rel="stylesheet" href="./styles/update.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="columns">
+        <div class="column col-8">
+
+        </div>
+        <div class="column col-4">
+          <img class="float-right logo" src="./images/cleverq.png" alt="cleverq_logo">
+        </div> 
+        <div class="column col-12">
+          <h5>Updating, please be patient...</h5>
+          <progress class="progress" style="margin-top: 0px;" id="download_progress" value="0" max="100"></progress>
+          <p style="color: white;"">Downloadspeed: <span id="download_speed" class="text-success"></span></p>
+        </div>
+      </div>
+    </div>
+    <script src="./javascript/update.js"></script>
+  </body>
+</html>

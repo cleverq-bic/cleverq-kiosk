@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Initial setup</title>
+    <link rel="stylesheet" href="../../node_modules/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="../../node_modules/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="../../node_modules/spectre.css/dist/spectre-icons.min.css">
+    <link rel="stylesheet" href="./styles/setup.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="columns">
+        <div class="column col-8">
+          <h4>Kiosk settings</h4>
+        </div>
+        <div class="column col-4">
+          <img class="float-right logo" src="./images/cleverq.png" alt="cleverq_logo">
+        </div> 
+        <div class="column col-12">
+          <form id="setupForm">
+            <div class="form-group">
+              <label class="form-label" for="url">Url</label>
+              <input class="form-input" type="text" id="url" placeholder="examples: cqm.cleverq.de, localhost:3000">
+              <label class="form-switch" for="setup">
+                <input type="checkbox" id="setup">
+                <i class="form-icon"></i> SSL?
+              </label>
+              <label class="form-label" for="proxy_ip">Proxy IP</label>
+              <input class="form-input" type="text" id="proxy_ip" placeholder="examples: 10.123.12.124">
+              <label class="form-label" for="proxy_port">Proxy Port</label>
+              <input class="form-input" type="text" id="proxy_port" placeholder="examples: 80, 8080, 443">
+              <button class="btn btn-primary btn-save float-right">Save</button>
+            </div>
+          </form>
+          <button id="resetButton" class="btn btn-reset float-right">Reset</button>
+        </div>
+      </div>
+    </div>
+    <script src="./javascript/setup.js"></script>
+  </body>
+</html>

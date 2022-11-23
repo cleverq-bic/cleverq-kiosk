@@ -1,0 +1,45 @@
+body {
+  background: #2261aa;
+}
+
+label {
+  color: white;
+}
+
+h4 {
+  color: white;
+  margin-top: 2px;
+}
+
+.logo {
+  margin-top: 5px;
+}
+
+.btn-primary {
+  background: #fac105 !important;
+  color: black !important;
+  width: 150px;
+  margin-top: 10px;
+}
+
+.btn-primary:hover {
+  background: #f8d358 !important;
+  color: black !important;
+}
+
+.btn-reset {
+  background: #e63939 !important;
+  color: black !important;
+  width: 150px;
+  margin-top: 10px;
+}
+
+.btn-reset:hover {
+  background: #ff6161 !important;
+  color: black !important;
+}
+
+.form-checkbox input:checked+.form-icon, .form-radio input:checked+.form-icon, .form-switch input:checked+.form-icon {
+  background: #fac105;
+  border-color: #fac105;
+}
