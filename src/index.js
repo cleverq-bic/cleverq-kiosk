@@ -198,7 +198,7 @@ const auto_updater = () => {
         provider: 'github',
         owner: 'cleverq-bic',
         repo: 'cleverq-kiosk',
-        token: "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"
+        token: "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"
       })
 
       autoUpdater.autoDownload = true
