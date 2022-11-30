@@ -1,6 +1,6 @@
 {
   "name": "cleverq-kiosk",
-  "version": "1.6.1-rev.b",
+  "version": "1.6.1-rev.c",
   "description": "a MEM-O-MATIC Kiosk",
   "main": "./src/index.js",
   "scripts": {

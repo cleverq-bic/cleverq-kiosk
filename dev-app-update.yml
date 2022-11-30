@@ -1,4 +1,4 @@
-token: ENV['gh_token']
+token: 
 provider: github
 owner: cleverq-bic
 repo: cleverq-kiosk

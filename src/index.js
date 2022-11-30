@@ -198,7 +198,7 @@ const auto_updater = () => {
         provider: 'github',
         owner: 'cleverq-bic',
         repo: 'cleverq-kiosk',
-        token: ENV['gh_token']
+        token: ''
       })
 
       autoUpdater.autoDownload = true
@@ -228,9 +228,8 @@ const auto_updater = () => {
       })
 
       autoUpdater.on('error', function (err) {
-        autoUpdater.logger.debug(err)
         update_status_handler(0)
-        resolve({status: 'error'})
+        resolve({status: 'no-update'})
       })
 
       autoUpdater.on('download-progress', function (progressObj) {
